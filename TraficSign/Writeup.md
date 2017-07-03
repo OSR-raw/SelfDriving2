@@ -63,15 +63,27 @@ After this change I've got ~92%
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an supplied dataset for 100 iteration.
-I was afraid of overfitting but result was 94% on validational set. I consider it as success.
+I was afraid of overfitting but result was 96.5% on validational set. I consider it as success.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
 
-* training set accuracy of 94%
+* test set accuracy of 94%
 * validation set accuracy of 96.5%
 * test set accuracy of 100% {Even tho this is not really reliable. 5 images do not provide sufficient sampling}
+
+### ADDTITIONAL AFTER REVIEW
+* What was the first architecture that was tried and why was it chosen?
+First arhitecture is the same that is used in the end - copy from "LeNet-Lab-Solution.ipynb" 
+* What were some problems with the initial architecture?
+Size of convolutianal layer and fully connected was obviously not sufficient.
+* How was the architecture adjusted and why was it adjusted?
+Increased size of convolutional layer and size of fully connected.
+* Which parameters were tuned? How were they adjusted and why?
+All the mentioned above plus number of epochs.
+* What are some of the important design choices and why were they chosen?
+Not much. Assuption was that NN is good but lust too small.
 
 ### Test a Model on New Images
 
@@ -80,14 +92,50 @@ My final model results were:
 Here are five German traffic signs that I found on the web: {https://github.com/OSR-raw/SelfDriving2/tree/master/TraficSign/GermanImgs}
 
 (I'm really sorry here. I do not know how to include images into .md file. I use online editor.)
+### ADDTITIONAL AFTER REVIEW
+* Nice job printing out the images here but you also are required to discuss before doing the actual prediction, what qualities your new images have (e.g: brightness, contrast, etc. ) that might cause your model to misclassify them.
+What could have caused the problem is brightness inconsistency. Yet normalisation should have removed that. {Up to some extend tho. Overall brightness of background would have made sign itself not visible}
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
+### ADDTITIONAL AFTER REVIEW
+*You provide a good analysis of the results on the newly acquired images but forgot to compare the accuracy on the new set of images to that on the old test set and tell if your model is overfitting or underfitting.
+Taking into account that I've got 100% accuracy and taking into account 94% on test set the chance to get 100% is 73.3%
+Yet even this can not tell me if I am over/underfitting.
+What this can tell me that with chance of 73.3% my NN is neither.
+*Your explanation can look something like: the accuracy on the captured images is X% while it was Y% on the testing set thus It seems the model is overfitting
+From data I have I can suggest the model is overfitting - thats why I got lover recognition rate for test set.
+Preciselly this {test set recognition rate} helps to speculate about it.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 8th cell of the Ipython notebook. Probabilities are there aswell.
+
+### ADDTITIONAL AFTER REVIEW
+* Just a little thing missing : You should clearly discuss how certain or uncertain your model is of its prediction.
+Chances:
+[[  1.00000000e+00   3.18314435e-26   8.26585780e-29   5.21670710e-31
+    2.37113745e-36]]
+[[ 7 40  5  8 42]]
+Test Accuracy = 1.000
+[[ 1.  0.  0.  0.  0.]]
+[[8 0 1 2 3]]
+Test Accuracy = 1.000
+[[  1.00000000e+00   1.11592281e-27   1.36433888e-28   7.01872909e-29
+    1.95939918e-30]]
+[[5 3 6 2 1]]
+Test Accuracy = 1.000
+[[ 1.  0.  0.  0.  0.]]
+[[12  0  1  2  3]]
+Test Accuracy = 1.000
+[[  1.00000000e+00   4.23970125e-29   1.43322424e-33   1.60533625e-34
+    1.37967262e-37]]
+[[10 37  5 42 40]]
+Test Accuracy = 1.000
+
+Taking into account that I've got nearly 100% chance for every image I can tell that model is completelly certain about its prediction.
+
 
 ##  Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
