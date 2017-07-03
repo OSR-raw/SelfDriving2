@@ -124,23 +124,38 @@ The code for making predictions on my final model is located in the 8th cell of 
 * Just a little thing missing : You should clearly discuss how certain or uncertain your model is of its prediction.
 
 Chances:
+
 [[  1.00000000e+00   3.18314435e-26   8.26585780e-29   5.21670710e-31
     2.37113745e-36]]
+	
 [[ 7 40  5  8 42]]
+
 Test Accuracy = 1.000
+
 [[ 1.  0.  0.  0.  0.]]
+
 [[8 0 1 2 3]]
+
 Test Accuracy = 1.000
+
 [[  1.00000000e+00   1.11592281e-27   1.36433888e-28   7.01872909e-29
     1.95939918e-30]]
+	
 [[5 3 6 2 1]]
+
 Test Accuracy = 1.000
+
 [[ 1.  0.  0.  0.  0.]]
+
 [[12  0  1  2  3]]
+
 Test Accuracy = 1.000
+
 [[  1.00000000e+00   4.23970125e-29   1.43322424e-33   1.60533625e-34
     1.37967262e-37]]
+	
 [[10 37  5 42 40]]
+
 Test Accuracy = 1.000
 
 Taking into account that I've got nearly 100% chance for every image I can tell that model is completelly certain about its prediction.
