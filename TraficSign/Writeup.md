@@ -75,14 +75,19 @@ My final model results were:
 
 ### ADDTITIONAL AFTER REVIEW
 * What was the first architecture that was tried and why was it chosen?
+
 First arhitecture is the same that is used in the end - copy from "LeNet-Lab-Solution.ipynb" 
 * What were some problems with the initial architecture?
+
 Size of convolutianal layer and fully connected was obviously not sufficient.
 * How was the architecture adjusted and why was it adjusted?
+
 Increased size of convolutional layer and size of fully connected.
 * Which parameters were tuned? How were they adjusted and why?
+
 All the mentioned above plus number of epochs.
 * What are some of the important design choices and why were they chosen?
+
 Not much. Assuption was that NN is good but lust too small.
 
 ### Test a Model on New Images
@@ -94,6 +99,7 @@ Here are five German traffic signs that I found on the web: {https://github.com/
 (I'm really sorry here. I do not know how to include images into .md file. I use online editor.)
 ### ADDTITIONAL AFTER REVIEW
 * Nice job printing out the images here but you also are required to discuss before doing the actual prediction, what qualities your new images have (e.g: brightness, contrast, etc. ) that might cause your model to misclassify them.
+
 What could have caused the problem is brightness inconsistency. Yet normalisation should have removed that. {Up to some extend tho. Overall brightness of background would have made sign itself not visible}
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
@@ -101,10 +107,12 @@ What could have caused the problem is brightness inconsistency. Yet normalisatio
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 ### ADDTITIONAL AFTER REVIEW
 *You provide a good analysis of the results on the newly acquired images but forgot to compare the accuracy on the new set of images to that on the old test set and tell if your model is overfitting or underfitting.
+
 Taking into account that I've got 100% accuracy and taking into account 94% on test set the chance to get 100% is 73.3%
 Yet even this can not tell me if I am over/underfitting.
 What this can tell me that with chance of 73.3% my NN is neither.
 *Your explanation can look something like: the accuracy on the captured images is X% while it was Y% on the testing set thus It seems the model is overfitting
+
 From data I have I can suggest the model is overfitting - thats why I got lover recognition rate for test set.
 Preciselly this {test set recognition rate} helps to speculate about it.
 
@@ -114,6 +122,7 @@ The code for making predictions on my final model is located in the 8th cell of 
 
 ### ADDTITIONAL AFTER REVIEW
 * Just a little thing missing : You should clearly discuss how certain or uncertain your model is of its prediction.
+
 Chances:
 [[  1.00000000e+00   3.18314435e-26   8.26585780e-29   5.21670710e-31
     2.37113745e-36]]
