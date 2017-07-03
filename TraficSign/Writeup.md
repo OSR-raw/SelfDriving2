@@ -71,7 +71,7 @@ My final model results were:
 
 * test set accuracy of 94%
 * validation set accuracy of 96.5%
-* test set accuracy of 100% {Even tho this is not really reliable. 5 images do not provide sufficient sampling}
+* new images accuracy of 100% {Even tho this is not really reliable. 5 images do not provide sufficient sampling}
 
 ### ADDTITIONAL AFTER REVIEW
 * What was the first architecture that was tried and why was it chosen?
@@ -106,12 +106,12 @@ What could have caused the problem is brightness inconsistency. Yet normalisatio
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 ### ADDTITIONAL AFTER REVIEW
-*You provide a good analysis of the results on the newly acquired images but forgot to compare the accuracy on the new set of images to that on the old test set and tell if your model is overfitting or underfitting.
+* You provide a good analysis of the results on the newly acquired images but forgot to compare the accuracy on the new set of images to that on the old test set and tell if your model is overfitting or underfitting.
 
 Taking into account that I've got 100% accuracy and taking into account 94% on test set the chance to get 100% is 73.3%
 Yet even this can not tell me if I am over/underfitting.
 What this can tell me that with chance of 73.3% my NN is neither.
-*Your explanation can look something like: the accuracy on the captured images is X% while it was Y% on the testing set thus It seems the model is overfitting
+* Your explanation can look something like: the accuracy on the captured images is X% while it was Y% on the testing set thus It seems the model is overfitting
 
 From data I have I can suggest the model is overfitting - thats why I got lover recognition rate for test set.
 Preciselly this {test set recognition rate} helps to speculate about it.
